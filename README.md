@@ -35,6 +35,10 @@ The goal of VisionLearn is to provide a structured and engaging digital environm
 ![Kids Placement Test](screenshots/Kids_placement_test.png)
 
 ---
+### 📈 Score Page
+- Display student scores clearly
+- Automatic score calculation  
+![Score Page](screenshots/Auto_score_page.png)
 
 ### 📊 Dashboard (Admin Panel)
 - Upload and manage activities
@@ -45,12 +49,6 @@ The goal of VisionLearn is to provide a structured and engaging digital environm
 
 ---
 
-### 📈 Score Page
-- Display student scores clearly
-- Automatic score calculation  
-![Score Page](screenshots/Auto_score_page.png)
-
----
 
 ### 📱 Responsive Design
 - Fully responsive (desktop, tablet, mobile)
