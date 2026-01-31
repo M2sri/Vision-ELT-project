@@ -24,7 +24,7 @@ The goal of VisionLearn is to provide a structured and engaging digital environm
 - Highlight important announcements
 - Manage and showcase teachers
 - Organized and user-friendly interface
--  ![DASHBOARD](screenshots/Dashboard.png)
+-  ![DASHBOARD](screenshots/Dashboard_overview.png)
 
 ### 🎓 Teacher Showcase
 - Display teachers with profiles
