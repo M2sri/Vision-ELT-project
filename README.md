@@ -17,7 +17,7 @@ The goal of VisionLearn is to provide a structured and engaging digital environm
 - Placement tests for **Kids and adults**
 - Automatic score calculation
 - Level-based result evaluation
-- ![Home Page](screenshots/Kids_placement_test.png)
+- ![Kids_placement_test](screenshots/Kids_placement_test.png)
 
 ### 📊 Dashboard (Admin Panel)
 - Upload and manage activities
@@ -29,7 +29,7 @@ The goal of VisionLearn is to provide a structured and engaging digital environm
 ### 🎓 Teacher Showcase
 - Display teachers with profiles
 - Highlight expertise and roles
- ![Home Page](screenshots/Teachers_section.png)
+ ![Teachers Section](screenshots/Teachers_section.png)
 
 ### 📱 Responsive Design
 - Fully responsive (desktop, tablet, mobile)
