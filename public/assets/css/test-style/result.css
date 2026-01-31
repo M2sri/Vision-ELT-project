@@ -1,0 +1,275 @@
+/* ============================================
+   TEST RESULTS PAGE
+============================================ */
+:root {
+    --bg: #0f1425;
+    --bg-soft: #1a2036;
+    --card: #1e253f;
+    --text: #f6f9ff;
+    --muted: #b0b7d8;
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --accent: #ec4899;
+    --secondary: #0ea5e9;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --border: rgba(255, 255, 255, 0.1);
+    --shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.result-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* ================= RESULT HEADER ================= */
+.result-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+}
+
+.result-header h1 {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.result-header .text-muted {
+    color: var(--muted) !important;
+    font-size: 16px;
+}
+
+/* ================= CARDS ================= */
+.card {
+    background: var(--card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius) !important;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    border-bottom: 1px solid var(--border) !important;
+    padding: 20px !important;
+    border-radius: var(--radius) var(--radius) 0 0 !important;
+}
+
+.card-body {
+    padding: 25px !important;
+    color: var(--text);
+}
+
+.card-title {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* ================= SCORE CIRCLE ================= */
+.score-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+    border: 5px solid var(--card);
+}
+
+/* ================= LEVEL DISPLAY ================= */
+.congratulations {
+    color: var(--muted);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.level-display {
+    font-size: 48px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 20px 0;
+    padding: 10px 0;
+}
+
+/* ================= PROGRESS BARS ================= */
+.progress {
+    background-color: var(--bg-soft) !important;
+    border-radius: 10px !important;
+    height: 10px !important;
+    overflow: hidden;
+}
+
+.progress-bar {
+    border-radius: 10px !important;
+    background: linear-gradient(90deg, var(--success), #0da271) !important;
+}
+
+.progress-bar-custom {
+    height: 12px !important;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* ================= SECTION SCORES ================= */
+.section-score {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.section-score:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section-score h6 {
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* ================= RECOMMENDATION BOX ================= */
+.recommendation-box {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+    border: 1px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.recommendation-box h5 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.recommendation-box p {
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    padding: 10px 24px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-outline-primary {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btn-outline-secondary {
+    background: transparent;
+    border: 2px solid var(--muted);
+    color: var(--muted);
+}
+
+.btn-outline-secondary:hover {
+    background: var(--muted);
+    color: var(--card);
+    transform: translateY(-2px);
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 768px) {
+    .result-container {
+        padding: 15px;
+    }
+    
+    .result-header h1 {
+        font-size: 28px;
+    }
+    
+    .level-display {
+        font-size: 36px;
+    }
+    
+    .score-circle {
+        width: 100px;
+        height: 100px;
+        font-size: 28px;
+    }
+    
+    .card-body {
+        padding: 20px !important;
+    }
+    
+    .section-score {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    .col-md-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .navigation-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,60 @@
+.path-section {
+    background: var(--bg-soft);
+}
+
+.path-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.path-step {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 auto 25px;
+}
+
+.path-step h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+.path-step ul {
+    list-style: none;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.path-step li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.path-step li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: bold;
+}

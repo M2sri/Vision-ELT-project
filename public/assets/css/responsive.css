@@ -1,0 +1,646 @@
+/* ==================================================
+   TABLET & BELOW (≤ 1024px)
+================================================== */
+@media (max-width: 1024px) {
+
+    .header-wrap {
+        padding: 14px 0;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+        gap: 14px; /* KEEP ICONS SIDE BY SIDE */
+    }
+
+    .logo-img {
+        height: 42px;
+    }
+
+    .logo-text {
+        font-size: 1.35rem;
+        letter-spacing: 2px;
+    }
+}
+
+
+/* ==================================================
+   MOBILE (≤ 768px)
+================================================== */
+@media (max-width: 768px) {
+
+    header {
+        backdrop-filter: blur(16px);
+    }
+
+    .header-wrap {
+        padding: 12px 0;
+    }
+
+    .logo {
+        gap: 10px;
+    }
+
+    .logo-img {
+        height: 38px;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+        letter-spacing: 1.8px;
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+        gap: 12px; /* FORCE HORIZONTAL ALIGNMENT */
+    }
+
+    .mobile-menu {
+        width: 42px;
+        height: 42px;
+    }
+
+    .mode-toggle {
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-nav {
+        padding-top: 95px;
+    }
+
+    .mobile-nav a {
+        font-size: 1.25rem;
+    }
+}
+
+
+/* ==================================================
+   SMALL PHONES (≤ 480px)
+================================================== */
+@media (max-width: 480px) {
+
+    .header-wrap {
+        padding: 10px 0;
+    }
+
+    .logo-text {
+        font-size: 1.05rem;
+        letter-spacing: 1.4px;
+    }
+
+    .logo-img {
+        height: 34px;
+    }
+
+    .actions {
+        gap: 10px; /* STILL SIDE BY SIDE */
+    }
+
+    .mobile-menu,
+    .mode-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mobile-nav a {
+        font-size: 1.15rem;
+    }
+}
+
+/* ==================================================
+   MOBILE MENU – DROPDOWN STYLE (≤ 768px)
+================================================== */
+@media (max-width: 768px) {
+
+    /* Mobile Nav Container */
+    .mobile-nav {
+        position: fixed;
+        top: 70px; /* HEIGHT OF HEADER */
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: calc(100vh - 70px);
+        background: rgba(10, 15, 30, 0.97);
+        backdrop-filter: blur(18px);
+
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all 0.35s ease;
+        z-index: 999;
+        padding: 25px 0;
+        overflow-y: auto;
+        border-bottom: 1px solid var(--border);
+    }
+
+    /* Active State */
+    .mobile-nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Menu Items */
+    .mobile-nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .mobile-nav li {
+        margin: 0;
+    }
+
+    .mobile-nav a {
+        font-size: 1.2rem;
+        padding: 10px 0;
+        display: inline-block;
+    }
+
+    /* Overlay – optional & softer */
+    .mobile-overlay {
+        background: rgba(0, 0, 0, 0.35);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   MOBILE GLOBAL IMPROVEMENTS
+========================================= */
+@media (max-width: 768px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding-inline: 18px;
+    }
+
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.9rem; }
+    h3 { font-size: 1.5rem; }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+    .hero {
+        padding-top: 110px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .hero p {
+        max-width: 100%;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .hero-card {
+        padding: 26px;
+        border-radius: 18px;
+    }
+
+    /* =========================
+       CARDS (Disable hover scale)
+    ========================= */
+    .base-card,
+    .course-card,
+    .path-step,
+    .vision-card,
+    .club-card,
+    .teacher-card {
+        transform: none;
+        opacity: 1;
+    }
+
+    /* =========================
+       PATH / COURSES / CLUB
+    ========================= */
+    .path-steps,
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .path-step,
+    .course-card {
+        padding: 30px 22px;
+    }
+
+
+
+
+/* =========================================================
+
+
+CLUB CSS CODE 
+==========================================================*/
+/* ==================================================
+   FEATURED ACTIVITY – MOBILE
+================================================== */
+
+/* ==================================================
+   FEATURED ACTIVITY – DESKTOP CONTROL
+================================================== */
+@media (min-width: 1025px) {
+
+    .featured-activity-card {
+        align-items: center; /* vertical balance */
+    }
+
+    .activity-media {
+        max-width: 520px; /* prevents huge image column */
+        flex: 0 0 520px;
+    }
+
+    .activity-image {
+        max-height: 420px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .featured-activity-card {
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+    }
+
+    /* IMAGE FIRST */
+    .activity-media {
+        order: 1;
+        width: 100%;
+    }
+
+    .image-frame {
+        min-height: 240px;
+    }
+
+    /* CONTENT BELOW */
+    .activity-content {
+        order: 2;
+    }
+
+    .activity-title {
+        font-size: 1.6rem;
+        margin-bottom: 16px;
+    }
+
+    .activity-description {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .activity-meta {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .activity-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .activity-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .image-frame {
+        min-height: 200px;
+    }
+
+    .activity-title {
+        font-size: 1.4rem;
+    }
+
+    .activity-features {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .activity-features .feature {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+/* =========================================================
+
+
+CLUB CSS CODE 
+==========================================================*/
+
+
+
+
+
+    /* =========================
+       SLIDERS (Gallery / Teachers / Clubs)
+    ========================= */
+    .gallery-slide,
+    .teacher-slide,
+    .club-slide {
+        flex: 0 0 100%;
+        padding: 0 6px;
+    }
+
+    .slider-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .slider-btn.prev { left: 10px; }
+    .slider-btn.next { right: 10px; }
+
+    .gallery-image {
+        height: 200px;
+    }
+
+    /* =========================
+       VISION
+    ========================= */
+    .vision-coming {
+        min-height: auto;
+        padding: 60px 16px;
+    }
+
+    .vision-title {
+        font-size: 2.2rem;
+    }
+
+    .vision-description {
+        font-size: 1.05rem;
+        margin-bottom: 50px;
+    }
+
+    .vision-cards {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 420px;
+        margin: auto;
+    }
+
+    .vision-stats {
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+    .cta-content {
+        padding: 36px 20px;
+        border-radius: 24px;
+    }
+
+    .cta-title {
+        font-size: 1.8rem;
+    }
+
+    .cta-text {
+        font-size: 1.05rem;
+    }
+
+    .cta-features {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .btn-cta {
+        width: 100%;
+        justify-content: center;
+        padding: 18px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+        padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+        gap: 40px;
+    }
+
+    .footer-col h4 {
+        font-size: 1.2rem;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+@media (max-width: 480px) {
+
+    .result-card {
+        padding: 1.6rem;
+    }
+
+    .score-value {
+        font-size: 1.9rem;
+    }
+}
+
+
+/* =========================================
+   DARK MODE REFINEMENT
+========================================= */
+@media (prefers-color-scheme: dark) {
+
+    .teacher-card {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .slider-btn {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+
+
+
+
+/* =========================================
+   GALLERY & SLIDERS
+========================================= */
+@media (max-width: 768px) {
+    .gallery-slide,
+    .teacher-slide,
+    .club-slide {
+        flex: 0 0 100% !important;
+        padding: 0 6px;
+    }
+
+    .slider-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .gallery-slide { 
+        flex: 0 0 50%; 
+    }
+    .gallery-slider {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-slide { 
+        flex: 0 0 100%; 
+    }
+    .slider-btn {
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .slider-btn.prev {
+        left: 10px;
+    }
+    .slider-btn.next {
+        right: 10px;
+    }
+    .gallery-image {
+        height: 200px;
+    }
+}
+
+/* =========================================
+   TOUCH DEVICES
+========================================= */
+@media (hover: none) and (pointer: coarse) {
+
+    .teacher-card {
+        cursor: pointer;
+    }
+
+    .slider-btn {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================================================
+   MOBILE CONTENT SIMPLIFICATION (≤ 768px) FOR THE CLUB SECTION FOR THE IMAGE 
+================================================== */
+@media (max-width: 768px) {
+
+    /* === FEATURED ACTIVITY === */
+
+    .activity-meta,
+    .activity-features,
+    .activity-actions {
+        display: none;
+    }
+
+    .activity-title {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+
+    .activity-description {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+
+    /* Keep duration visible but simple */
+    .activity-duration {
+        display: inline-flex;
+        margin-bottom: 12px;
+        font-size: 0.8rem;
+        padding: 6px 14px;
+    }
+
+
+    /* === GRID ACTIVITY CARDS === */
+
+    .activity-card .card-link {
+        display: none;
+    }
+
+    .activity-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+
+    .card-duration {
+        font-size: 0.75rem;
+        padding: 5px 12px;
+        margin-bottom: 10px;
+    }
+}
