@@ -26,10 +26,18 @@ The goal of VisionLearn is to provide a structured and engaging digital environm
 - Organized and user-friendly interface
 -  ![DASHBOARD](screenshots/Dashboard_overview.png)
 
+-  ###  Score page
+-  Display the score of students
+-  Calculate the score auto
+-  ![SCORE](screenshots/Auto_score_page.png)
+
 ### 🎓 Teacher Showcase
 - Display teachers with profiles
 - Highlight expertise and roles
  ![Teachers Section](screenshots/Teachers_section.png)
+
+
+
 
 ### 📱 Responsive Design
 - Fully responsive (desktop, tablet, mobile)
